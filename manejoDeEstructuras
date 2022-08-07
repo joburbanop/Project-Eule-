@@ -1,0 +1,51 @@
+# se solicita numeros se los gurda en una lista y posteriormente se realiza la suma de estos numeros 
+#si son mayores de 0
+lis=[]
+j=0
+Ingresado=input("ingresa un numero: ")
+while Ingresado!="salir" :
+    lis.append(Ingresado)
+    j+=1
+    Ingresado=input("ingresa un numero: ")
+suma=0
+for i in lis:
+    if int(i)>0 and str (i)!="salir":
+        suma+=int(i)
+print(f"la suma es: {suma}")
+
+
+
+# sacar el promedio de nota y mirar cuantos estudiantes estan por ecima del promedio
+numNotas=0
+sumNotas=0
+notasSperiores=0
+listaDeNotas=[]
+notas=int(input("ingresa tu nota"))
+while notas!=0:
+    listaDeNotas.append(notas)
+    numNotas+=1
+    sumNotas+=notas  
+    notas=int(input("ingresa tu nota"))
+promedio=sumNotas/numNotas
+for i in listaDeNotas:
+    if i>promedio:
+        notasSperiores+=1
+print(f"""las notas ingresadas son {listaDeNotas} 
+el promedio es {promedio}
+el numero de notas por encima del promedio son {notasSperiores}""")
+
+
+# juego de piedra papel o tigera, si es empate de nuevo.
+def PiedraPapelOTIgera(jugador1,jugador2):
+    #la posibles formas de ganar
+    posibilidades={"piedra":"tigera", "tigera":"papel","papel":"piedra"}
+    
+    if posibilidades[jugador1]==jugador2:
+        return 'gano el jugador uno'
+    if posibilidades[jugador2]==jugador1:
+        return 'gano el jugador 2'
+    else:
+        return 'empate'
+    
+    
+PiedraPapelOTIgera('piedra','papel')
