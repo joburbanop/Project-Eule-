@@ -1,0 +1,14 @@
+# se solicita numeros se los gurda en una lista y posteriormente se realiza la suma de estos numeros 
+#si son mayores de 0
+lis=[]
+j=0
+Ingresado=input("ingresa un numero: ")
+while Ingresado!="salir" :
+    lis.append(Ingresado)
+    j+=1
+    Ingresado=input("ingresa un numero: ")
+suma=0
+for i in lis:
+    if int(i)>0 and str (i)!="salir":
+        suma+=int(i)
+print(f"la suma es: {suma}")
